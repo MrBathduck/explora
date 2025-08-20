@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude-code --version)",
+      "Bash(npx @anthropic-ai/claude-code:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx create-react-app:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
