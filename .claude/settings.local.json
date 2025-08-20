@@ -6,7 +6,9 @@
       "Bash(node:*)",
       "Bash(npm:*)",
       "Bash(npx create-react-app:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

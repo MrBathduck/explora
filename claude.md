@@ -40,7 +40,7 @@
 ✅ Backend: Firebase (no server management needed)
 ✅ Database: Firestore (NoSQL, easy to start)
 ✅ Hosting: Netlify/Vercel (free tier)
-✅ Maps: Google Maps API (straightforward integration)
+✅ Maps: OpenStreetMap + React Leaflet (free, no API key needed)
 ```
 
 ### **Development Approach**
@@ -94,7 +94,7 @@
 **📚 Learning Focus Areas:**
 1. **React best practices** for travel app UI/UX
 2. **Firebase integration** - auth, database, hosting
-3. **Google Maps API** implementation and optimization
+3. **OpenStreetMap + React Leaflet** integration and optimization
 4. **Mobile-responsive design** patterns
 5. **Performance optimization** for image-heavy travel content
 
@@ -140,7 +140,7 @@ Phase 0: Documentation & Setup    🔄 IN PROGRESS
 Phase 1: Core Foundation         📋 UPCOMING
 ├── Location database setup       ⏸️ WAITING
 ├── Basic UI components           ⏸️ WAITING
-├── Google Maps integration       ⏸️ WAITING
+├── OpenStreetMap integration     ⏸️ WAITING
 └── User authentication           ⏸️ WAITING
 ```
 
@@ -228,7 +228,7 @@ Core Features:
 ├── 📍 Location Discovery (50-100 spots per city)
 ├── 🏷️ Basic Mood Matcher (4 simple moods)
 ├── 📅 Simple Itinerary Generator
-├── 🗺️ Google Maps integration
+├── 🗺️ OpenStreetMap integration
 └── 💾 Basic save/load functionality
 ```
 
@@ -302,7 +302,7 @@ Wave 4: Platform (events, bookings, partnerships)
 
 **If Claude needs quick context:**
 - **Project:** Explora travel app, solo developer, pre-development phase
-- **Stack:** React + Firebase + Google Maps, simple and pragmatic
+- **Stack:** React + Firebase + OpenStreetMap, simple and pragmatic
 - **Goal:** MVP with 100 users in 6 months
 - **Style:** Practical help for learning vibe coder
 - **Current:** Setting up documentation before coding starts
