@@ -1,8 +1,8 @@
-# 🤖 CLAUDE.md - AI Assistant Context & Project Status
+🤖 CLAUDE.md - AI Assistant Context & Project Status
 
 > **Last Updated:** January 2025  
-> **Project Phase:** Phase 0 - Documentation & Setup  
-> **Next Milestone:** Development Environment Setup
+> **Project Phase:** Phase 3 - Belgian Location Database & Trip Enhancement  
+> **Next Milestone:** 150+ Belgian locations, enhanced trip planner
 
 ---
 
@@ -12,42 +12,54 @@
 - **Name:** Explora
 - **Vision:** AI-powered travel planning that ends decision fatigue with privacy-first, real-time adaptation
 - **Core Value:** "Your smart city guide that learns your style while respecting your privacy"
+- **Current Focus:** Belgian cities (Brussels, Antwerp, Ghent) with advanced trip planning
 
 ### **Target Market**
-- **Primary:** European city travelers (tourists + locals exploring)
+- **Primary:** Belgian and European city travelers (tourists + locals exploring)
 - **Demographics:** Privacy-conscious, tech-savvy, values authentic experiences
 - **Pain Point:** Decision paralysis from too many travel options online
 
 ### **Current Development Phase**
-📍 **Phase 0: Documentation & Setup** (Pre-development)
-- Setting up comprehensive documentation suite
-- Preparing development environment
-- Finalizing MVP feature scope
+🎯 **Current Phase:** [Read from current project status - adaptable to any phase]
+- ✅ Production-ready React TypeScript application with full UI
+- ✅ OpenStreetMap integration with interactive features  
+- ✅ Firebase authentication and cloud data sync
+- ✅ Cross-category 4-layer tag system with quality control
+- ✅ Complete explora design system with category colors
+- ✅ Playwright testing infrastructure validated
+- 🔄 **CURRENT WORK:** [Current phase objectives - determined by project status]
+- 🔄 **CURRENT WORK:** [Phase-specific features and deliverables]
 
 ---
 
 ## 👨‍💻 Solo Developer Context
 
-### **Developer Profile** (Reference: `00-CORE-INSTRUCTIONS-Solo-Developer-Guide.md`)
+### **Developer Profile**
 - **Type:** "Vibe coder" (enthusiastic but not professional developer)
 - **Constraints:** Limited time, budget, and technical depth
 - **Strengths:** Quick learner, user-focused thinking, resourceful
 - **Reality Check:** Building alone initially, need to keep things simple
+- **Location:** Belgium - perfect for local testing and validation
 
 ### **Technology Decisions Made**
 ```
-✅ Frontend: React (familiar territory)
+✅ Frontend: React + TypeScript + Vite (familiar, modern)
 ✅ Backend: Firebase (no server management needed)
-✅ Database: Firestore (NoSQL, easy to start)
-✅ Hosting: Netlify/Vercel (free tier)
+✅ Database: Firestore (NoSQL, easy to start) + planned search service integration
+✅ Hosting: Netlify deployment planned for Phase 4
 ✅ Maps: OpenStreetMap + React Leaflet (free, no API key needed)
+✅ Testing: Playwright (E2E + visual regression testing)
+✅ Design System: Complete explora design token system with category colors
+✅ Location Database: Advanced 4-layer tag architecture with 111 total tags across 6 categories
+✅ Tag System: Primary (21 (to be expanded) tags/category), Secondary (20 tags), Hidden (18 tags), Contextual (15 tags)
+✅ Quality Framework: 0-100 scoring with cultural adaptation and cross-city intelligence
+✅ Scalability Architecture: Phase-based evolution from Firestore → Search Service → AI → Global Network
 ```
 
 ### **Development Approach**
-- **Philosophy:** "Do things that don't scale" for MVP
-- **Strategy:** Ultra-lean solo MVP → validate → iterate
-- **Timeline:** 6-8 months to functional MVP
-- **Success Metric:** 100 users in pilot city
+- **Philosophy:** "Do things that don't scale" for MVP validation
+- **Strategy:** Belgian pilot → validate → scale to European cities
+- **Success Metric:** 50+ active users in Belgian cities
 
 ---
 
@@ -63,20 +75,151 @@
 - **Style:** Concise, actionable guidance optimized for CLI workflow
 - **Context:** Maintain project state awareness across both environments
 - **Integration:** Reference web Claude documentation while providing hands-on coding assistance
+- **Problem Solving:** When encountering issues: 1) Explain the problem briefly, 2) Implement the fix directly, 3) User verifies solution
 
-### **Environment-Specific Roles**
+---
 
-#### **For Claude Code Sessions:**
-- **Primary Use:** Active development, file editing, debugging, testing
-- **Communication:** Direct, concise responses focused on immediate coding tasks
-- **File Operations:** Edit, create, and manage project files directly
-- **Problem Solving:** Real-time assistance with code issues and implementation
+## ⚡ Available Commands
 
-#### **For Web Claude Sessions:**
-- **Primary Use:** Strategic planning, comprehensive documentation, learning
-- **Communication:** Detailed explanations and educational content
-- **Documentation:** Maintain and update project documentation suite
-- **Planning:** High-level architecture decisions and roadmap planning
+### **Daily Workflow Commands**
+```
+/StartDay              # Morning orientation and goal setting
+/Status                # Current progress and next steps
+/TaskCompleted [task]  # Verify completed work quality
+/NextTask              # Identify next logical step
+/Concerns              # Quality check and issue identification
+```
+
+### **Feature & Issue Management Commands**
+```
+/FeatureRequest [features]  # Add new features to appropriate phases
+/ReportIssue [bug]         # Report bugs with auto-categorization
+/TriageIssues              # Process and categorize all new issues
+```
+
+### **Progress Tracking Commands**
+```
+/Progress              # Comprehensive project overview
+/Update [what changed] # Update documentation automatically
+/Skills                # Assess learning and skill development
+/Celebrate             # Acknowledge achievements and build motivation
+```
+
+### **Planning & Strategy Commands**
+```
+/WeeklyPlan           # Plan upcoming week's priorities
+/Compare [options]    # Help decide between different approaches
+```
+
+### **Quality & Maintenance Commands**
+```
+/Review               # Comprehensive code quality review
+/Test                 # Run Playwright tests
+/TestUI               # Open interactive test interface
+/MobileCheck          # Verify mobile-friendliness
+/Performance          # Check app speed and efficiency
+/Backup               # Guide through proper work saving
+/Deploy               # Help publish app online
+```
+
+### **Support & Motivation Commands**
+```
+/Motivation           # Get encouragement and perspective
+/Break                # Healthy break reminders and return guidance
+```
+
+---
+
+## 🎯 Current Phase 3 Status
+
+### **Success Parameters for Phase 3:**
+- **Location Coverage:** 150+ Belgian locations across Brussels, Antwerp, Ghent
+- **Trip Functionality:** Drag-and-drop day planning with activity limits working
+- **User Engagement:** 90%+ tag completion rate in onboarding
+- **Technical Performance:** <2s load time, offline trip access functional
+
+### **Phase 3 Progress Tracking:**
+```
+Belgian Location Database:     ░░░░░░░░░░░░ 0% (150+ locations needed)
+├── Brussels locations         ░░░░░░░░░░░░ 0% (50+ needed)
+├── Antwerp locations          ░░░░░░░░░░░░ 0% (50+ needed)
+└── Ghent locations            ░░░░░░░░░░░░ 0% (50+ needed)
+
+Trip Planner Enhancement:      ░░░░░░░░░░░░ 0% (core features needed)
+├── Drag-and-drop planning     ░░░░░░░░░░░░ 0% 
+├── Daily activity limits      ░░░░░░░░░░░░ 0%
+├── Location-based suggestions ░░░░░░░░░░░░ 0%
+└── Smart recommendations      ░░░░░░░░░░░░ 0%
+
+Advanced Tag System Architecture: ████████████ 100% COMPLETE ✅
+├── 4-layer tag taxonomy       ████████████ 100% ✅ (111 total tags defined)
+├── Quality scoring framework  ████████████ 100% ✅ (0-100 with cultural adaptation)
+├── Cross-category support     ████████████ 100% ✅ (multi-category locations)
+├── Scalability architecture   ████████████ 100% ✅ (Phase 1→4 evolution planned)
+└── Database schema evolution  ████████████ 100% ✅ (comprehensive implementation guide)
+```
+
+### **Current Sprint Focus:**
+1. **🔄 Location Database Transition** - Replace Vienna with Belgian cities
+2. **🎯 Trip Planner Core Features** - Drag-and-drop and activity limits
+3. **🤖 Smart Personalization** - Tag-based recommendations and scoring
+
+### **Quality Gates for Phase 3 Completion:**
+- 🔴 **Critical:** No bugs in core trip planning workflow
+- 🟡 **High:** Tag-based recommendations working accurately  
+- 🟠 **Medium/Low:** Belgian location data fully tagged and verified
+
+---
+
+## 🗺️ Phase Roadmap Summary
+
+### **Phase Management:**
+- **Phase Advancement:** Consult "explora-feature-list.md" 
+- **Feature Planning:** All new features must be categorized in roadmap
+- **Phase Completion:** Verify against roadmap success criteria before advancing
+
+### **Current Phase: [Adaptable - Read from Project Status]**
+```
+🎯 Goal: [Current phase objective]
+
+Core Deliverables:
+├── 📊 [Primary deliverable]
+├── ✨ [Secondary deliverable]
+├── 🎯 [Technical deliverable]  
+├── 📱 [UX/Performance deliverable]
+└── 🧪 [Quality assurance deliverable]
+```
+
+### **Next Phase: [Future Phase Preview]**
+```
+🎯 Goal: [Next phase objective]
+
+Key Milestones:
+├── 🌍 [Deployment/scaling milestone]
+├── 📊 [User/analytics milestone]
+├── 📱 [Platform milestone]
+└── 💬 [User feedback milestone]
+```
+
+### **Future Phases Overview:**
+```
+Phase [X]: [Phase Name] ([Timeframe])
+├── 🤖 [Advanced features]
+├── 🏛️ [Market/cultural integration]
+├── ⚡ [Performance & scalability]
+└── 🗺️ [Platform expansion]
+
+Phase [X+1]: [Phase Name] ([Timeframe])
+├── 👥 [Community/social features]
+├── 💰 [Monetization features]
+├── 🌍 [Geographic expansion]
+└── 📱 [Platform development]
+
+Phase [X+2]: [Phase Name] ([Timeframe])
+├── 🔮 [Innovation features]
+├── 🏢 [Business development]
+└── 🌟 [Advanced capabilities]
+```
 
 ---
 
@@ -95,8 +238,9 @@
 1. **React best practices** for travel app UI/UX
 2. **Firebase integration** - auth, database, hosting
 3. **OpenStreetMap + React Leaflet** integration and optimization
-4. **Mobile-responsive design** patterns
+4. **Belgian cultural context** - local insights for location curation
 5. **Performance optimization** for image-heavy travel content
+6. **Playwright testing** - visual regression and end-to-end testing
 
 **🚫 What NOT to Do:**
 - Don't suggest complex microservices architecture
@@ -104,209 +248,54 @@
 - Don't over-engineer solutions
 - Don't assume I know advanced development concepts
 - Don't duplicate work between environments
+- Don't create .md files for each problem - keep solutions in Claude Code workflow
 
-### **Code Assistance Preferences**
-```javascript
-// ✅ GOOD: Simple, commented, working example
-const LocationCard = ({ location }) => {
-  // Show location with image and basic info
-  return (
-    <div className="location-card">
-      <img src={location.image} alt={location.name} />
-      <h3>{location.name}</h3>
-      <p>{location.description}</p>
-    </div>
-  );
-};
+---
 
-// ❌ AVOID: Complex patterns without explanation
-const LocationCard = memo(forwardRef(({ location, onSelect, ...props }, ref) => {
-  // Complex implementation without context
-}));
+## 📊 Current Metrics & Status
+
+### **Technical Health Status:**
+```
+✅ App Performance: <2s load time (target met)
+✅ Error Rate: <1% JavaScript errors (clean codebase)
+✅ Test Coverage: Playwright E2E + visual regression tests passing
+✅ Design System: 100% explora token migration complete
+✅ Database: 4-layer tag system operational with quality control
+⚠️ Content: Need Belgian location database (0/150+ locations)
+⚠️ Features: Trip planner needs drag-and-drop and smart suggestions
+```
+
+### **Development Velocity:**
+```
+✅ Major Achievements: Advanced tag system, design system, testing infrastructure
+✅ Infrastructure: Production-ready foundation complete  
+🔄 Current Sprint: Belgian location research and trip planner enhancement
+🎯 Next Milestone: 50+ Brussels locations with proper tagging
+📅 Phase 3 Target: 3-4 months to completion
+```
+
+### **Quality Assurance:**
+```
+✅ Testing: Playwright infrastructure validated and operational
+✅ Design: Professional UI/UX with consistent explora design system
+✅ Performance: Optimized for production deployment readiness
+✅ Architecture: Scalable 4-layer tag system with Firebase integration
+🔄 Content Quality: Need systematic Belgian location curation process
 ```
 
 ---
 
-## 📊 Current Status Tracking
-
-### **Development Phase Status**
-```
-Phase 0: Documentation & Setup    🔄 IN PROGRESS
-├── Project documentation         ✅ COMPLETE
-├── Development environment       📋 TODO
-├── Firebase project setup        📋 TODO
-└── Initial React app creation    📋 TODO
-
-Phase 1: Core Foundation         📋 UPCOMING
-├── Location database setup       ⏸️ WAITING
-├── Basic UI components           ⏸️ WAITING
-├── OpenStreetMap integration     ⏸️ WAITING
-└── User authentication           ⏸️ WAITING
-```
-
-### **Next Milestones**
-1. **This Week:** Complete documentation suite
-2. **Next Week:** Set up development environment
-3. **Week 3-4:** Build first working prototype
-4. **Month 2:** Have basic location browsing working
-
-### **Achievement Log**
-```
-🎉 Achievements Unlocked:
-[Empty - first entry will be completing documentation]
-
-📈 Metrics to Track:
-- Features completed
-- User feedback received
-- Performance improvements
-- Learning milestones reached
-```
-
----
-
-## ⚡ Available Commands
-
-### **Daily Workflow Commands**
-```
-/StartDay              # Morning orientation and goal setting
-/Status                # Current progress and next steps
-/TaskCompleted [task]  # Verify completed work quality
-/NextTask              # Identify next logical step
-/Concerns              # Quality check and issue identification
-```
-
-### **Problem-Solving Commands**
-```
-/Stuck [problem]       # Get immediate help when blocked
-/Help [topic]          # Explain concepts in simple terms
-/Explain [code/error]  # Break down code or error messages
-```
-
-### **Progress Tracking Commands**
-```
-/Progress              # Comprehensive project overview
-/Update [what changed] # Update documentation automatically
-/Skills                # Assess learning and skill development
-/Celebrate             # Acknowledge achievements and build motivation
-```
-
-### **Planning & Strategy Commands**
-```
-/WeeklyPlan           # Plan upcoming week's priorities
-/Learn [skill]        # Create personalized learning plans
-/Research [topic]     # Investigate new features or technologies
-/Compare [options]    # Help decide between different approaches
-```
-
-### **Quality & Maintenance Commands**
-```
-/Review               # Comprehensive code quality review
-/MobileCheck          # Verify mobile-friendliness
-/Performance          # Check app speed and efficiency
-/Backup               # Guide through proper work saving
-/Deploy               # Help publish app online
-```
-
-### **Support & Motivation Commands**
-```
-/Motivation           # Get encouragement and perspective
-/Break                # Healthy break reminders and return guidance
-```
-
-### **Command File Location**
-All command specifications are stored in `.claude/commands/` folder for easy reference and consistency.
-
----
-
-## 🗺️ Phase Roadmap Summary
-
-### **Ultra-Lean Solo MVP (Months 1-8)**
-```
-🎯 Goal: Prove the concept works with real users
-
-Core Features:
-├── 📍 Location Discovery (50-100 spots per city)
-├── 🏷️ Basic Mood Matcher (4 simple moods)
-├── 📅 Simple Itinerary Generator
-├── 🗺️ OpenStreetMap integration
-└── 💾 Basic save/load functionality
-```
-
-### **Wave 1: Foundation (Months 8-12)**
-```
-🎯 Goal: 500+ users, basic community features
-
-Additions:
-├── 👥 User accounts and profiles
-├── ⭐ Review system (local vs traveler)
-├── 🔄 Real-time sync across devices
-└── 📱 Mobile app (React Native)
-```
-
-### **Future Waves (Year 2+)**
-```
-Wave 2: Intelligence (AI recommendations, learning)
-Wave 3: Community (social features, gamification)
-Wave 4: Platform (events, bookings, partnerships)
-```
-
-### **Current Focus: MVP Validation**
-- **Success Criteria:** 100 active users in pilot city
-- **Key Metric:** 70% user retention after first itinerary
-- **Timeline:** 6 months to launch, 2 months to validate
-
----
-
-## 🎛️ Development Workflow
-
-### **Daily Development Session**
-1. **Start with `/StartDay`** for orientation and daily goals
-2. **Use problem-solving commands** (`/Stuck`, `/Help`, `/Explain`) as needed
-3. **Verify completed work** with `/TaskCompleted [task name]`
-4. **Get next steps** with `/NextTask`
-5. **Update progress** with `/Update [accomplishment]`
-6. **Save work safely** with `/Backup`
-
-### **Weekly Planning**
-1. **Plan the week** with `/WeeklyPlan`
-2. **Check overall progress** with `/Progress`
-3. **Assess skill development** with `/Skills`
-4. **Celebrate achievements** with `/Celebrate`
-
-### **Problem-Solving Process**
-1. **Get unstuck immediately** with `/Stuck [specific problem]`
-2. **Learn concepts** with `/Help [topic]`
-3. **Debug issues** with `/Explain [error message]`
-4. **Check for problems** with `/Concerns`
-5. **Get motivation** with `/Motivation` when needed
-
----
-
-## 🎯 Success Enablers
-
-### **What Makes This Project Succeed**
-- **Realistic scope** - building only what's essential
-- **AI-assisted learning** - getting help when stuck
-- **Progress tracking** - maintaining motivation
-- **User-focused** - solving real problems simply
-
-### **Early Warning Signs**
-- 🚨 **Scope creep** - adding features before MVP validation
-- 🚨 **Tech complexity** - choosing advanced solutions unnecessarily
-- 🚨 **Perfectionism** - polishing instead of shipping
-- 🚨 **Isolation** - not getting user feedback early
-
----
-
-## 📞 Emergency Context Reset
+## 📋 Emergency Context Reset
 
 **If Claude needs quick context:**
-- **Project:** Explora travel app, solo developer, pre-development phase
-- **Stack:** React + Firebase + OpenStreetMap, simple and pragmatic
-- **Goal:** MVP with 100 users in 6 months
-- **Style:** Practical help for learning vibe coder
-- **Current:** Setting up documentation before coding starts
+- **Project:** Explora travel app, Belgian cities focus, solo developer in active development
+- **Stack:** React + TypeScript + Firebase + OpenStreetMap + Playwright, production-ready foundation
+- **Phase:** Phase 3 - Belgian location database + enhanced trip planner  
+- **Goal:** 150+ Belgian locations, drag-and-drop trip planning, 50+ users
+- **Testing:** Playwright E2E + visual regression tests operational
+- **Current:** Transitioning from Vienna to Belgian focus, enhancing trip functionality
+- **Style:** Practical help for learning vibe coder with Belgian market knowledge
 
 ---
 
-*This document is the source of truth for AI assistance context. Update it as the project evolves to maintain effective collaboration.*
+*This document is the source of truth for AI assistance context. Updated to reflect Phase 3 Belgian focus and enhanced command system.*

@@ -1,0 +1,302 @@
+/* ==================================================
+   EXPLORA TAG COMPONENT STYLES
+   ================================================== */
+
+/* Import design tokens */
+@import '../design-tokens.css';
+
+/* ==================================================
+   PRIMARY TAGS (3-5 tags, prominent display)
+   ================================================== */
+
+.explora-tag-primary {
+  display: inline-block;
+  padding: var(--explora-space-2) var(--explora-space-3);
+  background: var(--explora-white);
+  color: var(--explora-text-primary);
+  font-size: var(--explora-font-size-sm);
+  font-weight: var(--explora-font-weight-semibold);
+  border-radius: var(--explora-radius-lg);
+  letter-spacing: var(--explora-letter-spacing-tight);
+  transition: var(--explora-transition-base);
+  box-shadow: var(--explora-shadow-sm);
+  border: 2px solid var(--explora-category-default);
+  cursor: default;
+}
+
+.explora-tag-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--explora-shadow-md);
+}
+
+/* Primary tag container */
+.explora-tags-primary-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--explora-space-2);
+  margin: 0 0 var(--explora-space-3) 0;
+}
+
+/* ==================================================
+   SECONDARY TAGS (2-5 tags, detailed information)
+   ================================================== */
+
+.explora-tag-secondary {
+  display: inline-block;
+  padding: var(--explora-space-1) var(--explora-space-2);
+  background: rgba(107, 114, 128, 0.1);
+  color: var(--explora-text-secondary);
+  font-size: var(--explora-font-size-xs);
+  font-weight: var(--explora-font-weight-medium);
+  border-radius: var(--explora-radius-md);
+  border: 1px solid rgba(107, 114, 128, 0.2);
+  transition: var(--explora-transition-base);
+  cursor: default;
+}
+
+.explora-tag-secondary:hover {
+  background: rgba(107, 114, 128, 0.15);
+  border-color: rgba(107, 114, 128, 0.3);
+}
+
+/* Secondary tag container */
+.explora-tags-secondary-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--explora-space-1);
+  margin: 0 0 var(--explora-space-4) 0;
+}
+
+/* ==================================================
+   HIDDEN TAGS (Algorithmic insights)
+   ================================================== */
+
+.explora-tag-hidden {
+  display: inline-block;
+  padding: var(--explora-space-2) var(--explora-space-3);
+  background: linear-gradient(135deg, 
+    rgba(139, 69, 19, 0.1), 
+    rgba(160, 82, 45, 0.1));
+  color: #8b4513;
+  font-size: var(--explora-font-size-xs);
+  font-weight: var(--explora-font-weight-medium);
+  border-radius: var(--explora-radius-md);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  font-style: italic;
+  transition: var(--explora-transition-base);
+  cursor: default;
+}
+
+.explora-tag-hidden:hover {
+  background: linear-gradient(135deg, 
+    rgba(139, 69, 19, 0.15), 
+    rgba(160, 82, 45, 0.15));
+  border-color: rgba(139, 69, 19, 0.3);
+}
+
+/* Hidden tag container */
+.explora-tags-hidden-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--explora-space-2);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================================
+   CONTEXTUAL TAGS (Seasonal/timing)
+   ================================================== */
+
+.explora-tag-contextual {
+  display: inline-block;
+  padding: var(--explora-space-2) var(--explora-space-3);
+  background: linear-gradient(135deg, 
+    rgba(255, 110, 64, 0.1), 
+    rgba(255, 165, 0, 0.1));
+  color: var(--explora-accent-coral);
+  font-size: var(--explora-font-size-xs);
+  font-weight: var(--explora-font-weight-medium);
+  border-radius: var(--explora-radius-md);
+  border: 1px solid rgba(255, 110, 64, 0.2);
+  transition: var(--explora-transition-base);
+  cursor: default;
+}
+
+.explora-tag-contextual:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 110, 64, 0.15), 
+    rgba(255, 165, 0, 0.15));
+  border-color: rgba(255, 110, 64, 0.3);
+}
+
+/* Contextual tag container */
+.explora-tags-contextual-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--explora-space-2);
+}
+
+/* ==================================================
+   TAG GROUP STYLING (for modals)
+   ================================================== */
+
+.explora-tag-group {
+  margin-bottom: var(--explora-space-4);
+}
+
+.explora-tag-group:last-child {
+  margin-bottom: 0;
+}
+
+.explora-tag-group-label {
+  display: inline-block;
+  margin-bottom: var(--explora-space-2);
+  font-size: var(--explora-font-size-sm);
+  font-weight: var(--explora-font-weight-semibold);
+  color: var(--explora-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--explora-letter-spacing-wide);
+}
+
+/* Expandable toggle for hidden tags */
+.explora-tag-group-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: var(--explora-space-2);
+  cursor: pointer;
+  transition: var(--explora-transition-base);
+}
+
+.explora-tag-group-toggle:hover .explora-tag-group-label {
+  color: var(--explora-primary-teal);
+}
+
+.explora-tag-toggle-arrow {
+  font-size: var(--explora-font-size-xs);
+  color: var(--explora-text-secondary);
+  transition: transform 0.2s ease;
+}
+
+.explora-tag-toggle-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* ==================================================
+   CATEGORY COLOR VARIANTS
+   ================================================== */
+
+/* Culture & History */
+.explora-tag-primary.culture-history {
+  border-color: var(--explora-category-culture);
+}
+
+/* Museums & Art */
+.explora-tag-primary.museums-art {
+  border-color: var(--explora-category-museums);
+}
+
+/* Parks & Nature */
+.explora-tag-primary.parks-nature {
+  border-color: var(--explora-category-parks);
+}
+
+/* Urban Exploration */
+.explora-tag-primary.urban-exploration {
+  border-color: var(--explora-category-urban);
+}
+
+/* Creative & Street Culture */
+.explora-tag-primary.creative-street {
+  border-color: var(--explora-category-creative);
+}
+
+/* Scenic & Panoramic */
+.explora-tag-primary.scenic-panoramic {
+  border-color: var(--explora-category-scenic);
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN
+   ================================================== */
+
+@media (max-width: 768px) {
+  .explora-tags-primary-container {
+    gap: var(--explora-space-2);
+  }
+  
+  .explora-tag-primary {
+    padding: var(--explora-space-2) var(--explora-space-3);
+    font-size: var(--explora-font-size-xs);
+  }
+  
+  .explora-tag-secondary,
+  .explora-tag-hidden,
+  .explora-tag-contextual {
+    font-size: 10px;
+    padding: var(--explora-space-1) var(--explora-space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .explora-tags-primary-container {
+    gap: var(--explora-space-1);
+  }
+  
+  .explora-tag-primary {
+    padding: var(--explora-space-1) var(--explora-space-2);
+    font-size: 11px;
+  }
+}
+
+/* ==================================================
+   ACCESSIBILITY
+   ================================================== */
+
+.explora-tag-primary:focus,
+.explora-tag-secondary:focus,
+.explora-tag-hidden:focus,
+.explora-tag-contextual:focus {
+  outline: 2px solid var(--explora-primary-teal);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .explora-tag-primary {
+    border-width: 3px;
+  }
+  
+  .explora-tag-secondary,
+  .explora-tag-hidden,
+  .explora-tag-contextual {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .explora-tag-primary,
+  .explora-tag-secondary,
+  .explora-tag-hidden,
+  .explora-tag-contextual {
+    transition: none;
+  }
+  
+  .explora-tags-hidden-container {
+    animation: none;
+  }
+}

@@ -30,6 +30,3 @@ Response Template:
 
 📊 Wave 1 Target: [Timeline] to MVP
    Status: [On Track/Behind/Ahead] 🎉
-
-🔥 Momentum: [High/Medium/Low]
-   [Encouragement based on momentum]

@@ -1,0 +1,117 @@
+.notification-container {
+  position: fixed;
+  top: 80px;
+  right: var(--explora-space-5);
+  z-index: var(--explora-z-notification);
+  display: flex;
+  flex-direction: column;
+  gap: var(--explora-space-2);
+  pointer-events: none;
+}
+
+.notification {
+  background: var(--explora-white);
+  border-radius: var(--explora-radius-lg);
+  padding: var(--explora-space-4);
+  box-shadow: var(--explora-shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 400px;
+  border-left: 4px solid;
+  pointer-events: auto;
+  animation: slideIn var(--explora-transition-slow) ease-out;
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--explora-gray-border);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.notification-success {
+  border-left-color: var(--explora-success);
+  background: var(--explora-success-bg);
+}
+
+.notification-error {
+  border-left-color: var(--explora-error);
+  background: var(--explora-error-bg);
+}
+
+.notification-info {
+  border-left-color: var(--explora-primary-blue);
+  background: var(--explora-info-bg);
+}
+
+.notification-warning {
+  border-left-color: var(--explora-warning);
+  background: var(--explora-warning-bg);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  flex: 1;
+}
+
+.notification-icon {
+  font-size: var(--explora-font-size-lg);
+}
+
+.notification-message {
+  font-size: var(--explora-font-size-sm);
+  color: var(--explora-text-primary);
+  font-weight: var(--explora-font-weight-semibold);
+  font-family: var(--explora-font-family-primary);
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: var(--explora-text-secondary);
+  cursor: pointer;
+  padding: 0;
+  width: var(--explora-space-6);
+  height: var(--explora-space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--explora-radius-full);
+  font-size: var(--explora-font-size-sm);
+  transition: var(--explora-transition-base);
+}
+
+.notification-close:hover {
+  background: var(--explora-background-subtle);
+  color: var(--explora-text-primary);
+  transform: scale(1.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .notification-container {
+    top: 70px;
+    right: var(--explora-space-3);
+    left: var(--explora-space-3);
+  }
+  
+  .notification {
+    min-width: auto;
+    max-width: none;
+    padding: var(--explora-space-3);
+  }
+  
+  .notification-message {
+    font-size: var(--explora-font-size-xs);
+  }
+}

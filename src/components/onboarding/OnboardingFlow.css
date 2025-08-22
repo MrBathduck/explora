@@ -1,0 +1,290 @@
+.onboarding-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--explora-overlay-dark);
+  backdrop-filter: blur(8px);
+  z-index: var(--explora-z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--explora-space-4);
+}
+
+.onboarding-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 95vh;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.onboarding-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4A90E2 0%, #357ABD 100%);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+.onboarding-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 11;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.onboarding-close:hover {
+  background: #f8f9fa;
+  color: #495057;
+  transform: scale(1.05);
+}
+
+.onboarding-step {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 80px; /* Account for progress bar */
+}
+
+.onboarding-error {
+  position: absolute;
+  top: 80px;
+  left: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.onboarding-error p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.onboarding-error button {
+  background: none;
+  border: none;
+  color: #721c24;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.onboarding-error button:hover {
+  background: rgba(114, 28, 36, 0.1);
+}
+
+.onboarding-loading {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4A90E2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+.onboarding-loading h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.onboarding-loading p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Step transitions */
+.onboarding-step > * {
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .onboarding-overlay {
+    padding: 0;
+  }
+  
+  .onboarding-container {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .onboarding-progress {
+    padding: 0.75rem 1rem;
+  }
+  
+  .progress-text {
+    font-size: 0.75rem;
+  }
+  
+  .onboarding-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  
+  .onboarding-step {
+    padding-top: 70px;
+  }
+  
+  .onboarding-error {
+    top: 70px;
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .onboarding-progress {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  
+  .progress-bar {
+    margin-right: 0;
+    order: 2;
+  }
+  
+  .progress-text {
+    order: 1;
+    text-align: center;
+  }
+  
+  .onboarding-step {
+    padding-top: 90px;
+  }
+  
+  .onboarding-error {
+    top: 90px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .onboarding-overlay {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .onboarding-progress {
+    background: white;
+    border-bottom: 2px solid black;
+  }
+  
+  .progress-fill {
+    background: #000;
+  }
+  
+  .onboarding-close {
+    background: white;
+    border: 2px solid black;
+    color: black;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill,
+  .onboarding-close,
+  .onboarding-step > * {
+    transition: none;
+    animation: none;
+  }
+  
+  .loading-spinner {
+    animation: none;
+    border-top-color: #4A90E2;
+  }
+}

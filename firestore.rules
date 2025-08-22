@@ -1,0 +1,145 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ==============================================
+    // HELPER FUNCTIONS
+    // ==============================================
+    
+    // Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Check if user owns the document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Check if user ID in data matches authenticated user
+    function isValidUserData() {
+      return request.resource.data.userId == request.auth.uid;
+    }
+    
+    // Check if required fields are present
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+    
+    // ==============================================
+    // USER FAVORITES COLLECTION
+    // ==============================================
+    
+    match /userFavorites/{userId} {
+      // Users can only read/write their own favorites
+      allow read: if isOwner(userId);
+      
+      // Allow creation with proper validation
+      allow create: if isOwner(userId)
+        && isValidUserData()
+        && hasRequiredFields(['userId', 'favorites', 'updatedAt'])
+        && request.resource.data.favorites is list
+        && request.resource.data.favorites.size() <= 1000  // Limit favorites
+        && request.resource.data.updatedAt is timestamp;
+      
+      // Allow updates only to favorites and updatedAt fields
+      allow update: if isOwner(userId)
+        && isValidUserData()
+        && request.resource.data.diff(resource.data).affectedKeys()
+           .hasOnly(['favorites', 'updatedAt'])
+        && request.resource.data.favorites is list
+        && request.resource.data.favorites.size() <= 1000;
+    }
+    
+    // ==============================================
+    // USER TRIPS COLLECTION  
+    // ==============================================
+    
+    match /userTrips/{tripId} {
+      // Users can only read trips they own
+      allow read: if isAuthenticated() 
+        && resource.data.userId == request.auth.uid;
+      
+      // Allow creation of new trips with validation
+      allow create: if isAuthenticated()
+        && request.resource.data.userId == request.auth.uid
+        && hasRequiredFields([
+          'id', 'userId', 'name', 'startDate', 'endDate', 
+          'days', 'createdAt', 'updatedAt'
+        ])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.startDate is string
+        && request.resource.data.endDate is string
+        && request.resource.data.days is list
+        && request.resource.data.days.size() <= 30  // Max 30 days
+        && request.resource.data.createdAt is timestamp
+        && request.resource.data.updatedAt is timestamp;
+      
+      // Allow updates to owned trips
+      allow update: if isAuthenticated()
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.days is list
+        && request.resource.data.days.size() <= 30;
+      
+      // Allow deletion of owned trips
+      allow delete: if isAuthenticated()
+        && resource.data.userId == request.auth.uid;
+    }
+    
+    // ==============================================
+    // USER PROFILES COLLECTION
+    // ==============================================
+    
+    // User profiles - users can only access their own profile
+    match /users/{userId} {
+      // Users can read and write their own profile
+      allow read, write: if isOwner(userId);
+      
+      // Allow creation with basic validation
+      allow create: if isOwner(userId)
+        && hasRequiredFields(['uid', 'email', 'displayName', 'createdAt', 'lastUpdated'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.createdAt is timestamp
+        && request.resource.data.lastUpdated is timestamp;
+      
+      // Allow updates with validation
+      allow update: if isOwner(userId)
+        && request.resource.data.uid == resource.data.uid  // UID cannot change
+        && request.resource.data.lastUpdated is timestamp;
+    }
+    
+    // Legacy user profiles collection (future feature)
+    match /userProfiles/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+    
+    // Public locations data (read-only for users)
+    match /locations/{locationId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admin can modify locations
+    }
+    
+    // User reviews (future feature)
+    match /reviews/{reviewId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAuthenticated()
+        && request.resource.data.userId == request.auth.uid;
+    }
+    
+    // ==============================================
+    // DEFAULT DENY ALL
+    // ==============================================
+    
+    // Deny access to any other documents
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

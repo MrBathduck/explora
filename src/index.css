@@ -1,7 +1,14 @@
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: var(--explora-font-family-primary);
+  line-height: var(--explora-line-height-normal);
+  font-weight: var(--explora-font-weight-regular);
+  color: var(--explora-text-primary);
+  background-color: var(--explora-background-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,54 +16,85 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-family: var(--explora-font-family-primary);
+  background: var(--explora-background-secondary);
+}
+
+/* Link Styles */
+a {
+  font-weight: var(--explora-font-weight-medium);
+  color: var(--explora-primary-teal);
+  text-decoration: none;
+  transition: var(--explora-transition-base);
+}
+
+a:hover {
+  color: var(--explora-primary-teal-dark);
+  text-decoration: underline;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--explora-font-family-display);
+  font-weight: var(--explora-font-weight-bold);
+  line-height: var(--explora-line-height-tight);
+  margin: 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: var(--explora-font-size-4xl);
 }
 
+h2 {
+  font-size: var(--explora-font-size-3xl);
+}
+
+h3 {
+  font-size: var(--explora-font-size-2xl);
+}
+
+/* Paragraph Styles */
+p {
+  font-family: var(--explora-font-family-primary);
+  line-height: var(--explora-line-height-relaxed);
+  margin: 0 0 var(--explora-space-4) 0;
+}
+
+/* Button Reset - Let component styles take precedence */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--explora-primary-teal);
+  outline-offset: 2px;
+}
+
+/* Remove default button styling to let components handle it */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

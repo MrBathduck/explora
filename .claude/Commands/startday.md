@@ -1,6 +1,6 @@
 # /StartDay Command
 
-> **Command Purpose:** Daily orientation and goal setting for vibe coder
+> **Command Purpose:** Daily orientation and goal setting for current development phase
 
 ---
 
@@ -10,23 +10,27 @@
 
 #### **1. Current Project Status Check**
 - Read CLAUDE.md for current phase and progress
-- Check last update date and recent milestones
-- Identify current development phase percentage
+- Check phase-specific success criteria and completion percentage
+- Identify current development priorities based on active phase
+- Review any critical/high priority issues in PROBLEMS.md
 
 #### **2. Today's Priority Assessment**
-- Review TODO.md "This Week" section
-- Identify 1-2 realistic tasks for today
-- Consider user's skill level and energy
+- Review TODO.md current phase priorities
+- Focus on phase-appropriate tasks (location research, features, or optimization)
+- Identify 1-2 realistic tasks for today based on current phase needs
+- Consider user's skill level and phase complexity requirements
 
 #### **3. Recent Progress Celebration**
-- Highlight yesterday's or recent achievements
-- Check CHANGELOG.md for recent completions
-- Build confidence and momentum
+- Highlight yesterday's or recent achievements from CHANGELOG.md
+- Acknowledge progress toward current phase targets
+- Celebrate completed features, milestones, or learning achievements
+- Build confidence and momentum toward phase completion
 
 #### **4. Environment Check**
-- Verify development environment is ready
-- Check if any setup issues need addressing
-- Ensure all tools are working properly
+- Verify development environment is ready for current phase work
+- Check if phase-specific tools are available (research, development, testing)
+- Ensure database architecture is ready for current phase complexity
+- Confirm any specialized infrastructure is operational
 
 ---
 
@@ -35,78 +39,92 @@
 ```
 🌅 Good morning! Here's where we stand:
 
-📍 Current Phase: [Phase Name] ([X]% complete)
-🎯 Focus Area: [Current main objective]
+📍 Current Phase: [Phase Name from CLAUDE.md] ([X]% complete)
+🎯 Phase Focus: [Current phase main objectives]
 🏆 Recent Win: [Latest achievement from CHANGELOG]
 
 Today's Suggested Goals:
-1. [Primary task - realistic and specific] ⭐
-2. [Secondary task - if energy allows] 
+1. [Primary phase-appropriate task] ⭐
+2. [Secondary task aligned with phase priorities] 
 
-📚 Learning Focus: [What skill/concept to focus on today]
+📚 Learning Focus: [Phase-relevant skills or concepts]
 
-🛠️ Environment Status: [All tools ready / Need to check X]
+🛠️ Environment Status: [Development/Research/Testing tools ready]
 
-Ready to start? Need any reminders about setup or yesterday's work?
+📊 Phase Progress:
+- [Key metric 1]: [Current status toward phase target]
+- [Key metric 2]: [Progress indicator]
+- [Key metric 3]: [Completion status]
+
+Ready to advance toward phase completion? Need any setup reminders?
 ```
 
 ---
 
 ## 🔍 Specific Checks to Perform
 
-### **Documentation Status:**
-- ✅ Is CLAUDE.md current phase accurate?
-- ✅ Are there completed tasks not marked in TODO.md?
-- ✅ Any urgent items in PROBLEMS.md?
+### **Phase Documentation Status:**
+- ✅ Is CLAUDE.md current phase progress accurate?
+- ✅ Are phase-appropriate tasks progressing in TODO.md?
+- ✅ Any critical issues blocking phase completion in PROBLEMS.md?
+- ✅ Phase success criteria and targets on track?
 
 ### **Development Environment:**
-- ✅ Is development server running (if applicable)?
-- ✅ Are there any pending updates or installations?
-- ✅ Any error messages from previous session?
+- ✅ Is development server running for feature testing?
+- ✅ Database ready for current phase data requirements?
+- ✅ Phase-specific components operational?
+- ✅ Any error messages from previous session work?
 
-### **Energy and Motivation:**
-- 🌟 Acknowledge progress made so far
-- 🎯 Set realistic expectations for the day
-- 💪 Encourage learning mindset over perfection
+### **Phase-Specific Readiness:**
+- ✅ Tools ready for current phase work (research, development, deployment)?
+- ✅ Required resources available (cultural context, technical docs, APIs)?
+- ✅ Infrastructure appropriate for phase complexity level?
+- ✅ Quality frameworks operational for current phase validation?
 
 ---
 
 ## 💡 Adaptive Responses
 
-### **If User is in Phase 0 (Setup):**
-- Focus on environment setup progress
-- Emphasize that setup is temporary but important
-- Celebrate each tool installation as real progress
+### **If User is in Early Phase (Setup/Foundation):**
+- Focus on environment setup and basic feature progress
+- Emphasize foundation building and core functionality
+- Celebrate each milestone as important progress
+- Prepare for next phase complexity
 
-### **If User is in Active Development:**
-- Review current feature in progress
-- Check for any blockers from previous session
-- Plan incremental progress on current feature
+### **If User is in Active Development Phase:**
+- Review current feature or database work in progress
+- Check for any technical or design blockers from previous session
+- Plan incremental progress on phase-specific deliverables
+- Connect current work to phase success criteria
 
-### **If User Seems Overwhelmed:**
-- Suggest smaller, more manageable tasks
-- Remind them that learning takes time
-- Offer simpler alternatives to complex tasks
+### **If User is in Advanced Phase:**
+- Focus on sophisticated features, optimization, or scaling
+- Review complex integrations or advanced functionality
+- Plan work on AI features, cultural adaptation, or global systems
+- Prepare for phase completion and next phase transition
 
-### **If User is Making Great Progress:**
-- Acknowledge momentum and skills development
-- Suggest slightly more challenging tasks
-- Prepare for next phase planning
+### **If User Seems Overwhelmed by Phase Complexity:**
+- Break down phase requirements into smaller, manageable tasks
+- Suggest focusing on single components before integration
+- Offer simpler approaches before attempting advanced features
+- Remind that each phase builds foundation for the next
 
 ---
 
 ## 🎯 Success Criteria
 
 After `/StartDay` command, user should feel:
-- ✅ Clear about what to work on today
-- ✅ Confident about their recent progress
-- ✅ Motivated to start coding/learning
-- ✅ Aware of any technical issues to address
+- ✅ Clear about current phase priorities and objectives
+- ✅ Confident about their progress toward phase completion
+- ✅ Motivated to advance phase-appropriate features or research
+- ✅ Aware of any technical issues blocking phase advancement
 
 ---
 
 ## 🔗 Related Commands
 
-- Follow up with `/Status` for detailed progress
-- Use `/Help [topic]` if user needs concept explanation
-- Suggest `/TaskCompleted` when today's goals are finished
+- Follow up with `/Status` for detailed current phase progress
+- Use `/Help [topic]` for phase-appropriate concept guidance
+- Suggest `/TaskCompleted` when phase goals are finished
+- Use `/FeatureRequest` for new phase enhancement ideas
+- Use `/ReportIssue` if bugs are discovered during development

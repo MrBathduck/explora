@@ -1,0 +1,268 @@
+.onboarding-welcome {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--explora-gradient-primary);
+  overflow: hidden;
+  padding: var(--explora-space-8);
+}
+
+.welcome-content {
+  max-width: 500px;
+  background: var(--explora-white);
+  border-radius: var(--explora-radius-2xl);
+  padding: var(--explora-space-12) var(--explora-space-10);
+  box-shadow: var(--explora-shadow-2xl);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border: 1px solid var(--explora-gray-border);
+}
+
+.welcome-hero {
+  margin-bottom: var(--explora-space-10);
+}
+
+.welcome-logo {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.welcome-title {
+  font-size: var(--explora-font-size-4xl);
+  font-weight: var(--explora-font-weight-bold);
+  color: var(--explora-text-primary);
+  margin-bottom: var(--explora-space-2);
+  line-height: var(--explora-line-height-tight);
+  font-family: var(--explora-font-family-display);
+}
+
+.welcome-subtitle {
+  font-size: var(--explora-font-size-xl);
+  color: var(--explora-text-secondary);
+  margin: 0;
+  font-weight: var(--explora-font-weight-regular);
+  font-family: var(--explora-font-family-primary);
+}
+
+.welcome-benefits {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--explora-space-4);
+  margin-bottom: var(--explora-space-6);
+  padding: var(--explora-space-4);
+  background: var(--explora-background-subtle);
+  border-radius: var(--explora-radius-xl);
+  transition: var(--explora-transition-base);
+  border: 1px solid var(--explora-gray-border);
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  background: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.benefit-text h3 {
+  margin: 0 0 var(--explora-space-1) 0;
+  font-size: var(--explora-font-size-lg);
+  font-weight: var(--explora-font-weight-semibold);
+  color: var(--explora-text-primary);
+  font-family: var(--explora-font-family-display);
+}
+
+.benefit-text p {
+  margin: 0;
+  font-size: var(--explora-font-size-sm);
+  color: var(--explora-text-secondary);
+  line-height: var(--explora-line-height-tight);
+  font-family: var(--explora-font-family-primary);
+}
+
+.welcome-preview {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #e8f4fd;
+  border-radius: 12px;
+  border-left: 4px solid #4A90E2;
+}
+
+.preview-text {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.welcome-actions {
+  text-align: center;
+}
+
+.continue-button {
+  background: var(--explora-gradient-primary);
+  color: var(--explora-white);
+  border: none;
+  padding: var(--explora-space-4) var(--explora-space-10);
+  font-size: var(--explora-font-size-lg);
+  font-weight: var(--explora-font-weight-semibold);
+  border-radius: var(--explora-radius-full);
+  cursor: pointer;
+  transition: var(--explora-transition-base);
+  box-shadow: var(--explora-shadow-lg);
+  margin-bottom: var(--explora-space-4);
+  font-family: var(--explora-font-family-primary);
+}
+
+.continue-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--explora-shadow-xl);
+}
+
+.continue-button:active {
+  transform: translateY(0);
+}
+
+.skip-note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Floating background elements */
+.welcome-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+  top: 60%;
+  left: 85%;
+  animation-delay: -2s;
+}
+
+.floating-icon:nth-child(3) {
+  top: 40%;
+  left: 5%;
+  animation-delay: -4s;
+}
+
+.floating-icon:nth-child(4) {
+  top: 10%;
+  right: 15%;
+  animation-delay: -1s;
+}
+
+.floating-icon:nth-child(5) {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: -3s;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .onboarding-welcome {
+    padding: 1rem;
+  }
+  
+  .welcome-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .benefit-text {
+    text-align: center;
+  }
+  
+  .continue-button {
+    width: 100%;
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-logo {
+    font-size: 3rem;
+  }
+  
+  .welcome-title {
+    font-size: 1.75rem;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1rem;
+  }
+}

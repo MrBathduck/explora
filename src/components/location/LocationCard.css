@@ -1,0 +1,346 @@
+/* ==================================================
+   EXPLORA LOCATION CARD - MODERN LANDMARK DESIGN
+   ================================================== */
+
+/* Import tag component styles */
+@import '../../Styles/components/tags.css';
+
+.location-card {
+  background: var(--explora-white);
+  border-radius: var(--explora-radius-2xl);
+  box-shadow: var(--explora-shadow-base);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid var(--explora-gray-border);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--explora-shadow-xl);
+  border-color: var(--explora-primary-teal);
+}
+
+.location-card:hover .location-image {
+  transform: scale(1.05);
+}
+
+/* Enhanced Image Container - Optimized for Grid */
+.location-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background: linear-gradient(45deg, var(--explora-primary-teal-light), var(--explora-accent-coral-light));
+  flex-shrink: 0;
+}
+
+.location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Floating Action Buttons */
+.location-actions {
+  position: absolute;
+  top: var(--explora-space-4);
+  right: var(--explora-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--explora-space-2);
+  z-index: 10;
+}
+
+.favorite-button {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--explora-shadow-md);
+}
+
+.favorite-button:hover {
+  transform: scale(1.15);
+  background: var(--explora-white);
+  box-shadow: var(--explora-shadow-lg);
+}
+
+.favorite-button.favorite {
+  background: rgba(255, 110, 64, 0.95);
+  color: var(--explora-white);
+  animation: favoriteAdded 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes favoriteAdded {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3) rotate(12deg); }
+  100% { transform: scale(1); }
+}
+
+/* Gradient Overlay for Better Text Readability */
+.location-image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+  pointer-events: none;
+}
+
+/* Enhanced Content Area - Optimized for Grid */
+.location-content {
+  padding: var(--explora-space-5);
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Category Badge - Removed per user request */
+
+/* Enhanced Typography */
+.location-name {
+  margin: 0 0 var(--explora-space-3) 0;
+  font-family: var(--explora-font-family-display);
+  font-size: var(--explora-font-size-xl);
+  font-weight: var(--explora-font-weight-bold);
+  color: var(--explora-text-primary);
+  line-height: var(--explora-line-height-tight);
+  letter-spacing: var(--explora-letter-spacing-tight);
+}
+
+.location-description {
+  margin: 0 0 var(--explora-space-4) 0;
+  font-size: var(--explora-font-size-sm);
+  color: var(--explora-text-secondary);
+  line-height: var(--explora-line-height-relaxed);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Use centralized tag styles */
+.location-tags-primary {
+  /* Inherits from .explora-tags-primary-container */
+}
+
+.primary-tag {
+  /* Inherits from .explora-tag-primary */
+}
+
+.location-tags-secondary {
+  /* Inherits from .explora-tags-secondary-container */
+}
+
+.secondary-tag {
+  /* Inherits from .explora-tag-secondary */
+}
+
+/* AI Recommendation Highlight */
+.recommendation-reason {
+  display: flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  margin: 0 0 var(--explora-space-4) 0;
+  padding: var(--explora-space-3) var(--explora-space-4);
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+  border-left: 4px solid var(--explora-warning-yellow);
+  border-radius: var(--explora-radius-lg);
+  font-size: var(--explora-font-size-xs);
+  color: #b8860b;
+  transition: var(--explora-transition-base);
+}
+
+.recommendation-reason:hover {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.15));
+  transform: translateX(2px);
+}
+
+.recommendation-icon {
+  font-size: var(--explora-font-size-sm);
+  line-height: 1;
+}
+
+.recommendation-text {
+  flex: 1;
+  font-weight: var(--explora-font-weight-medium);
+  font-style: italic;
+}
+
+/* Rating and Address - Better Visual Hierarchy */
+.location-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--explora-space-1);
+  margin: var(--explora-space-2) 0;
+  padding: var(--explora-space-1) var(--explora-space-3);
+  background: rgba(255, 193, 7, 0.1);
+  border-radius: var(--explora-radius-full);
+  font-size: var(--explora-font-size-sm);
+  font-weight: var(--explora-font-weight-semibold);
+  color: #b8860b;
+}
+
+.location-address {
+  display: flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  margin: var(--explora-space-3) 0 0 0;
+  font-size: var(--explora-font-size-xs);
+  color: var(--explora-text-secondary);
+  opacity: 0.8;
+}
+
+/* Trip Indicator - Enhanced Design */
+.location-trip-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  margin-top: var(--explora-space-4);
+  padding: var(--explora-space-3) var(--explora-space-4);
+  background: var(--explora-gradient-primary);
+  border-radius: var(--explora-radius-lg);
+  color: var(--explora-white);
+  font-size: var(--explora-font-size-xs);
+  font-weight: var(--explora-font-weight-semibold);
+  box-shadow: var(--explora-shadow-sm);
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.trip-indicator-icon {
+  font-size: var(--explora-font-size-sm);
+}
+
+.trip-indicator-text {
+  flex: 1;
+  font-size: var(--explora-font-size-xs);
+}
+
+/* Enhanced Mobile Responsiveness - Grid Optimized */
+@media (max-width: 1024px) {
+  .location-image-container {
+    height: 180px;
+  }
+  
+  .location-content {
+    padding: var(--explora-space-4);
+  }
+  
+  .location-name {
+    font-size: var(--explora-font-size-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .location-image-container {
+    height: 160px;
+  }
+  
+  .location-content {
+    padding: var(--explora-space-3);
+  }
+  
+  .location-name {
+    font-size: var(--explora-font-size-base);
+  }
+  
+  .favorite-button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .location-description {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-image-container {
+    height: 200px;
+  }
+  
+  .location-content {
+    padding: var(--explora-space-4);
+  }
+  
+  .location-name {
+    font-size: var(--explora-font-size-lg);
+  }
+}
+
+/* Focus States for Accessibility */
+.location-card:focus {
+  outline: 3px solid var(--explora-primary-teal);
+  outline-offset: 2px;
+}
+
+.favorite-button:focus {
+  outline: 2px solid var(--explora-accent-coral);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.location-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.location-card.loading .location-image {
+  filter: grayscale(0.3);
+}
+
+/* Premium Card Variant for Special Locations */
+.location-card.premium {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              var(--explora-gradient-primary) border-box;
+}
+
+.location-card.premium::before {
+  content: '⭐';
+  position: absolute;
+  top: var(--explora-space-4);
+  left: var(--explora-space-4);
+  background: var(--explora-gradient-primary);
+  color: var(--explora-white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--explora-font-size-sm);
+  z-index: 5;
+  box-shadow: var(--explora-shadow-md);
+}

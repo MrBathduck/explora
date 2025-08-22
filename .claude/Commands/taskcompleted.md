@@ -17,20 +17,24 @@
 #### **2. Quality Assessment**
 - Review code organization and readability
 - Check for common beginner mistakes
+- **🧪 Run Playwright tests automatically**
+- **📸 Check for visual regressions**
 - Verify mobile responsiveness (if UI task)
 - Ensure no critical errors or warnings
+
+#### **2a. Automated Testing Process**
+```bash
+npm test
+```
+- If tests PASS: ✅ Proceed with completion
+- If tests FAIL: 🔍 Investigate issues
+- **📸 Visual Changes Detected:** Prompt for snapshot update approval
 
 #### **3. Documentation Updates**
 - Update TODO.md to mark task complete
 - Add entry to CHANGELOG.md
 - Update progress in CLAUDE.md
 - Add learning notes to NOTES.md
-
-#### **4. Celebration and Recognition**
-- Acknowledge the achievement properly
-- Highlight skills demonstrated or learned
-- Build confidence for next challenges
-- Motivate continued progress
 
 ---
 
@@ -44,6 +48,11 @@
 - [Specific requirement 2] ✅/❌
 - [Specific requirement 3] ✅/❌
 
+🧪 Test Results:
+- Functional tests: [PASSED/FAILED] ([X]/[Y] tests)
+- Visual tests: [PASSED/FAILED] ([X]/[Y] tests)
+- 📸 Screenshots: [UP TO DATE/NEED UPDATE]
+
 🎯 Quality Assessment: [PASSED/NEEDS WORK]
 [Brief explanation of quality level]
 
@@ -52,8 +61,6 @@
 - CHANGELOG.md: Achievement logged
 - CLAUDE.md: Progress updated
 - NOTES.md: Learning milestone recorded
-
-🎉 Celebration: [Specific acknowledgment of accomplishment]
 
 ⏭️ Ready for next task? Type /NextTask to continue!
 ```
@@ -71,10 +78,13 @@
 
 ### **For UI/Frontend Tasks:**
 - ✅ Visual elements display correctly
-- ✅ Responsive design works on mobile
+- ✅ Responsive design works on mobile  
 - ✅ User interactions function as expected
 - ✅ No JavaScript console errors
 - ✅ Accessibility basics considered
+- **🧪 All Playwright tests pass**
+- **📸 Visual screenshots match expectations**
+- **📱 Mobile viewport tests pass**
 
 ### **For Backend/Database Tasks:**
 - ✅ Data operations work correctly
@@ -104,10 +114,45 @@
 - 🟡 **Mostly Complete:** Minor features missing
 - 🔴 **Incomplete:** Major functionality missing
 
-### **Learning Demonstration:**
-- 🟢 **Strong:** User understands what they built
-- 🟡 **Moderate:** User can explain with help
-- 🔴 **Weak:** User confused about their own work
+---
+
+## 📸 **Screenshot Update Decision Guide**
+
+### **When Claude Should Prompt for Screenshot Updates:**
+
+#### **✅ APPROVE Updates When:**
+- **Intentional UI changes:** Added new components, changed styling, improved design
+- **Feature additions:** New buttons, forms, modals, or UI elements
+- **Layout improvements:** Better responsive design, spacing, alignment
+- **Bug fixes that affect visuals:** Corrected colors, fonts, positioning
+
+#### **❌ REJECT Updates When:**
+- **Accidental changes:** Unintended styling breaks or regressions
+- **Browser rendering issues:** Font loading, timing-based differences
+- **Test environment problems:** Different screen resolution artifacts
+
+#### **🔍 INVESTIGATE When:**
+- **Small pixel differences (< 1%):** Could be font/rendering variations
+- **Color shifts:** Might indicate CSS loading issues
+- **Layout shifts:** Could be legitimate improvements or problematic regressions
+
+### **Claude's Update Prompt Template:**
+```
+📸 Visual Changes Detected!
+
+Changed Components:
+- [Component]: [X]% difference - [Description of change]
+- [Component]: [X]% difference - [Description of change]
+
+🤔 These changes appear to be: [INTENTIONAL/ACCIDENTAL/UNCLEAR]
+
+Recommendation: [UPDATE SNAPSHOTS/INVESTIGATE/FIX ISSUE]
+
+Would you like me to:
+1. 🎯 Update snapshots (if changes are intentional)
+2. 🔍 Open TestUI to review changes
+3. 🛠️ Help investigate the differences
+```
 
 ---
 
@@ -151,29 +196,6 @@ Issues detected:
 Don't worry - every developer faces these challenges.
 Would you like me to walk you through fixing these step by step?
 ```
-
----
-
-## 🎉 Celebration Guidelines
-
-### **For First-Time Achievements:**
-- Emphasize the learning milestone
-- Compare to where they started
-- Build confidence for future challenges
-- Suggest sharing progress with others
-
-### **For Complex Tasks:**
-- Acknowledge the difficulty level
-- Highlight persistence and problem-solving
-- Note specific skills demonstrated
-- Encourage tackling similar challenges
-
-### **For Creative Solutions:**
-- Praise innovative thinking
-- Highlight unique approaches taken
-- Encourage continued creativity
-- Note growing developer instincts
-
 ---
 
 ## 📈 Progress Tracking Actions

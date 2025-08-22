@@ -1,0 +1,152 @@
+.mood-matcher {
+  margin-bottom: 2rem;
+}
+
+.mood-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 2px solid #e1e8ed;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mood-toggle:hover {
+  border-color: #4A90E2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mood-toggle-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mood-toggle-arrow {
+  transition: transform 0.2s ease;
+  color: #666;
+}
+
+.mood-toggle-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.mood-options {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 2px solid #e1e8ed;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.mood-option:hover {
+  border-color: var(--mood-color);
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option.active {
+  border-color: var(--mood-color);
+  background: var(--mood-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mood-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mood-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mood-description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+.mood-option.active .mood-description {
+  opacity: 0.9;
+}
+
+.clear-mood {
+  width: 100%;
+  padding: 0.75rem;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #666;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-mood:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .mood-option {
+    padding: 0.75rem;
+  }
+  
+  .mood-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .mood-name {
+    font-size: 0.875rem;
+  }
+  
+  .mood-description {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mood-grid {
+    grid-template-columns: 1fr;
+  }
+}

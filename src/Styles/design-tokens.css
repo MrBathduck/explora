@@ -1,0 +1,648 @@
+/* ==================================================
+   EXPLORA DESIGN SYSTEM - MAIN BRANDING FILE
+   ==================================================
+   
+   This file contains all design tokens for the Explora app.
+   Import this file in all other CSS files to maintain consistency.
+   
+   File: /src/styles/design-system.css (or brand.css)
+   Usage: @import './design-system.css';
+   ================================================== */
+
+/* ==================================================
+   COLOR PALETTE - PRIMARY BRAND COLORS
+   ================================================== */
+
+:root {
+  /* Primary Brand Colors - Updated for Explora */
+  --explora-primary-teal: #17a2b8;
+  --explora-primary-teal-light: #20c997;
+  --explora-primary-teal-dark: #138496;
+  
+  /* Secondary Accent Colors */
+  --explora-accent-coral: #FF6E40;
+  --explora-accent-coral-light: #FF8A65;
+  --explora-accent-coral-dark: #FF5722;
+  
+  /* Brand Gradient - Based on your current header */
+  --explora-gradient-primary: linear-gradient(135deg, var(--explora-primary-teal), var(--explora-accent-coral));
+  --explora-gradient-header: linear-gradient(135deg, #17a2b8 0%, #FF6E40 100%);
+  
+  /* Neutral Colors */
+  --explora-white: #FFFFFF;
+  --explora-black: #000000;
+  --explora-gray-charcoal: #333333;
+  --explora-gray-medium: #666666;
+  --explora-gray-light: #F4F4F4;
+  --explora-gray-border: #E0E0E0;
+  --explora-gray-card: #2D2D2D;        /* For dark cards like in trips page */
+  --explora-gray-background: #1A1A1A;   /* For dark backgrounds */
+  
+  /* Subtle Brand Colors */
+  --explora-blue-gray: #ECF5F5;
+  --explora-blue-gray-dark: #B0BEC5;
+  
+  /* Tertiary Accent Colors */
+  --explora-success-green: #4CAF50;
+  --explora-warning-yellow: #FFC107;
+  --explora-error-red: #F44336;
+  --explora-info-blue: #2196F3;
+  
+  /* Category Colors for Location Tags */
+  --explora-category-culture: #8B4513;      /* Saddle Brown - Culture & History */
+  --explora-category-museums: #4B0082;      /* Indigo - Museums & Art */
+  --explora-category-parks: #228B22;        /* Forest Green - Parks & Nature */
+  --explora-category-urban: #696969;        /* Dim Gray - Urban Exploration */
+  --explora-category-creative: #FF4500;     /* Orange Red - Creative & Street Culture */
+  --explora-category-scenic: #1E90FF;       /* Dodger Blue - Scenic & Panoramic */
+  --explora-category-default: #17a2b8;      /* Default teal for unknown categories */
+  
+  /* Semantic Color Mappings */
+  --explora-text-primary: var(--explora-gray-charcoal);
+  --explora-text-secondary: var(--explora-gray-medium);
+  --explora-text-inverse: var(--explora-white);
+  --explora-text-on-dark: var(--explora-white);
+  --explora-background-primary: var(--explora-white);
+  --explora-background-secondary: var(--explora-gray-light);
+  --explora-background-subtle: var(--explora-blue-gray);
+  --explora-background-dark: var(--explora-gray-background);
+  --explora-background-card-dark: var(--explora-gray-card);
+  
+  /* Legacy mappings for existing code */
+  --color-primary-teal: var(--explora-primary-teal);
+  --color-primary-teal-light: var(--explora-primary-teal-light);
+  --color-accent-coral: var(--explora-accent-coral);
+  --color-white: var(--explora-white);
+  --color-text-primary: var(--explora-text-primary);
+  --color-text-secondary: var(--explora-text-secondary);
+  --color-background-primary: var(--explora-background-primary);
+  --color-background-secondary: var(--explora-background-secondary);
+  --color-border-light: var(--explora-gray-border);
+  --gradient-primary: var(--explora-gradient-primary);
+  --font-family-primary: var(--explora-font-family-primary);
+  --font-family-display: var(--explora-font-family-display);
+  --font-size-xs: var(--explora-font-size-xs);
+  --font-size-sm: var(--explora-font-size-sm);
+  --font-size-base: var(--explora-font-size-base);
+  --font-size-lg: var(--explora-font-size-lg);
+  --font-size-xl: var(--explora-font-size-xl);
+  --font-size-2xl: var(--explora-font-size-2xl);
+  --font-size-3xl: var(--explora-font-size-3xl);
+  --font-size-4xl: var(--explora-font-size-4xl);
+  --font-size-5xl: var(--explora-font-size-5xl);
+  --font-weight-medium: var(--explora-font-weight-medium);
+  --font-weight-semibold: var(--explora-font-weight-semibold);
+  --font-weight-bold: var(--explora-font-weight-bold);
+  --line-height-tight: var(--explora-line-height-tight);
+  --line-height-normal: var(--explora-line-height-normal);
+  --line-height-relaxed: var(--explora-line-height-relaxed);
+  --letter-spacing-tight: var(--explora-letter-spacing-tight);
+  --letter-spacing-normal: var(--explora-letter-spacing-normal);
+  --letter-spacing-wide: var(--explora-letter-spacing-wide);
+  --letter-spacing-wider: var(--explora-letter-spacing-wider);
+  --space-1: var(--explora-space-1);
+  --space-2: var(--explora-space-2);
+  --space-3: var(--explora-space-3);
+  --space-4: var(--explora-space-4);
+  --space-5: var(--explora-space-5);
+  --space-6: var(--explora-space-6);
+  --space-8: var(--explora-space-8);
+  --space-10: var(--explora-space-10);
+  --space-12: var(--explora-space-12);
+  --space-16: var(--explora-space-16);
+  --space-20: var(--explora-space-20);
+  --space-24: var(--explora-space-24);
+  --space-32: var(--explora-space-32);
+  --border-radius-lg: var(--explora-radius-lg);
+  --border-radius-xl: var(--explora-radius-xl);
+  --border-radius-2xl: var(--explora-radius-2xl);
+  --border-radius-full: var(--explora-radius-full);
+  --shadow-sm: var(--explora-shadow-sm);
+  --shadow-base: var(--explora-shadow-base);
+  --shadow-md: var(--explora-shadow-md);
+  --shadow-lg: var(--explora-shadow-lg);
+  --shadow-xl: var(--explora-shadow-xl);
+  --transition-base: var(--explora-transition-base);
+  --card-radius: var(--explora-radius-2xl);
+  --card-padding: var(--explora-space-6);
+  --card-shadow: var(--explora-shadow-md);
+  --container-lg: var(--explora-container-lg);
+  --container-xl: var(--explora-container-xl);
+  --spacing-page-padding: var(--explora-spacing-page-padding);
+  --spacing-component-gap: var(--explora-spacing-component-gap);
+  
+  /* Interactive Colors */
+  --explora-button-primary: var(--explora-accent-coral);
+  --explora-button-primary-hover: var(--explora-accent-coral-dark);
+  --explora-button-secondary: var(--explora-primary-teal);
+  --explora-button-secondary-hover: var(--explora-primary-teal-dark);
+  --explora-link: var(--explora-primary-teal);
+  --explora-link-hover: var(--explora-primary-teal-dark);
+}
+
+/* ==================================================
+   TYPOGRAPHY SYSTEM
+   ================================================== */
+
+:root {
+  /* Font Families */
+  --explora-font-family-primary: 'Nunito Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --explora-font-family-display: 'Montserrat', 'Nunito Sans', sans-serif;
+  --explora-font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  
+  /* Font Weights */
+  --explora-font-weight-light: 300;
+  --explora-font-weight-regular: 400;
+  --explora-font-weight-medium: 500;
+  --explora-font-weight-semibold: 600;
+  --explora-font-weight-bold: 700;
+  --explora-font-weight-extrabold: 800;
+  
+  /* Font Sizes - Mobile First */
+  --explora-font-size-xs: 0.75rem;   /* 12px */
+  --explora-font-size-sm: 0.875rem;  /* 14px */
+  --explora-font-size-base: 1rem;    /* 16px */
+  --explora-font-size-lg: 1.125rem;  /* 18px */
+  --explora-font-size-xl: 1.25rem;   /* 20px */
+  --explora-font-size-2xl: 1.5rem;   /* 24px */
+  --explora-font-size-3xl: 1.875rem; /* 30px */
+  --explora-font-size-4xl: 2.25rem;  /* 36px */
+  --explora-font-size-5xl: 3rem;     /* 48px */
+  
+  /* Line Heights */
+  --explora-line-height-tight: 1.25;
+  --explora-line-height-snug: 1.375;
+  --explora-line-height-normal: 1.5;
+  --explora-line-height-relaxed: 1.625;
+  --explora-line-height-loose: 2;
+  
+  /* Letter Spacing */
+  --explora-letter-spacing-tighter: -0.05em;
+  --explora-letter-spacing-tight: -0.025em;
+  --explora-letter-spacing-normal: 0em;
+  --explora-letter-spacing-wide: 0.025em;
+  --explora-letter-spacing-wider: 0.05em;
+}
+
+/* ==================================================
+   SPACING SYSTEM
+   ================================================== */
+
+:root {
+  /* Spacing Scale - Based on 8px grid */
+  --explora-space-1: 0.25rem;  /* 4px */
+  --explora-space-2: 0.5rem;   /* 8px */
+  --explora-space-3: 0.75rem;  /* 12px */
+  --explora-space-4: 1rem;     /* 16px */
+  --explora-space-5: 1.25rem;  /* 20px */
+  --explora-space-6: 1.5rem;   /* 24px */
+  --explora-space-8: 2rem;     /* 32px */
+  --explora-space-10: 2.5rem;  /* 40px */
+  --explora-space-12: 3rem;    /* 48px */
+  --explora-space-16: 4rem;    /* 64px */
+  --explora-space-20: 5rem;    /* 80px */
+  --explora-space-24: 6rem;    /* 96px */
+  --explora-space-32: 8rem;    /* 128px */
+  
+  /* Semantic Spacing */
+  --explora-spacing-page-padding: var(--explora-space-4);
+  --explora-spacing-section-gap: var(--explora-space-12);
+  --explora-spacing-component-gap: var(--explora-space-6);
+  --explora-spacing-element-gap: var(--explora-space-4);
+}
+
+/* ==================================================
+   LAYOUT & BREAKPOINTS
+   ================================================== */
+
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Container Widths */
+  --explora-container-sm: 100%;
+  --explora-container-md: 768px;
+  --explora-container-lg: 1024px;
+  --explora-container-xl: 1280px;
+  --container-sm: var(--explora-container-sm);
+  --container-md: var(--explora-container-md);
+  --container-lg: var(--explora-container-lg);
+  --container-xl: var(--explora-container-xl);
+  
+  /* Common Widths */
+  --width-sidebar: 320px;
+  --width-modal: 500px;
+  --width-card: 300px;
+  
+  /* Z-Index Scale */
+  --explora-z-dropdown: 1000;
+  --explora-z-sticky: 1020;
+  --explora-z-fixed: 1030;
+  --explora-z-modal-backdrop: 1040;
+  --explora-z-modal: 1050;
+  --explora-z-popover: 1060;
+  --explora-z-tooltip: 1070;
+  --explora-z-toast: 1080;
+  --z-dropdown: var(--explora-z-dropdown);
+  --z-sticky: var(--explora-z-sticky);
+  --z-fixed: var(--explora-z-fixed);
+  --z-modal-backdrop: var(--explora-z-modal-backdrop);
+  --z-modal: var(--explora-z-modal);
+  --z-popover: var(--explora-z-popover);
+  --z-tooltip: var(--explora-z-tooltip);
+  --z-toast: var(--explora-z-toast);
+}
+
+/* ==================================================
+   SHADOWS & EFFECTS
+   ================================================== */
+
+:root {
+  /* Box Shadows */
+  --explora-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --explora-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --explora-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --explora-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --explora-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: var(--explora-shadow-sm);
+  --shadow-base: var(--explora-shadow-base);
+  --shadow-md: var(--explora-shadow-md);
+  --shadow-lg: var(--explora-shadow-lg);
+  --shadow-xl: var(--explora-shadow-xl);
+  
+  /* Border Radius */
+  --explora-radius-sm: 0.125rem;  /* 2px */
+  --explora-radius-base: 0.25rem; /* 4px */
+  --explora-radius-md: 0.375rem;  /* 6px */
+  --explora-radius-lg: 0.5rem;    /* 8px */
+  --explora-radius-xl: 0.75rem;   /* 12px */
+  --explora-radius-2xl: 1rem;     /* 16px */
+  --explora-radius-full: 9999px;
+  --radius-sm: var(--explora-radius-sm);
+  --radius-base: var(--explora-radius-base);
+  --radius-md: var(--explora-radius-md);
+  --radius-lg: var(--explora-radius-lg);
+  --radius-xl: var(--explora-radius-xl);
+  --radius-2xl: var(--explora-radius-2xl);
+  --radius-full: var(--explora-radius-full);
+  
+  /* Transitions */
+  --explora-transition-fast: 150ms ease-in-out;
+  --explora-transition-base: 250ms ease-in-out;
+  --explora-transition-slow: 350ms ease-in-out;
+  --transition-fast: var(--explora-transition-fast);
+  --transition-base: var(--explora-transition-base);
+  --transition-slow: var(--explora-transition-slow);
+}
+
+/* ==================================================
+   COMPONENT SPECIFIC TOKENS
+   ================================================== */
+
+:root {
+  /* Buttons */
+  --button-height-sm: 2rem;      /* 32px */
+  --button-height-base: 2.5rem;  /* 40px */
+  --button-height-lg: 3rem;      /* 48px */
+  --button-padding-x: var(--space-4);
+  --button-padding-y: var(--space-2);
+  --button-radius: var(--radius-md);
+  
+  /* Form Elements */
+  --input-height: var(--button-height-base);
+  --input-padding: var(--space-3);
+  --input-border-color: var(--color-gray-border);
+  --input-border-color-focus: var(--color-primary-teal);
+  --input-radius: var(--radius-base);
+  
+  /* Cards */
+  --card-padding: var(--space-6);
+  --card-radius: var(--radius-lg);
+  --card-shadow: var(--shadow-md);
+  
+  /* Navigation */
+  --nav-height: 4rem;           /* 64px */
+  --nav-padding: var(--space-4);
+  --nav-link-padding: var(--space-3);
+  
+  /* Map */
+  --map-height-mobile: 40vh;
+  --map-height-desktop: 60vh;
+  --map-border-radius: var(--radius-lg);
+}
+
+/* ==================================================
+   UTILITY CLASSES
+   ================================================== */
+
+/* Typography Utilities */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-brand { color: var(--color-primary-teal); }
+.text-accent { color: var(--color-accent-coral); }
+
+.font-display { font-family: var(--font-family-display); }
+.font-body { font-family: var(--font-family-primary); }
+
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+
+/* Background Utilities */
+.bg-primary { background-color: var(--color-background-primary); }
+.bg-secondary { background-color: var(--color-background-secondary); }
+.bg-brand { background-color: var(--color-primary-teal); }
+.bg-accent { background-color: var(--color-accent-coral); }
+
+/* Spacing Utilities */
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-4 { margin: var(--space-4); }
+.m-6 { margin: var(--space-6); }
+.m-8 { margin: var(--space-8); }
+
+/* ==================================================
+   EXPLORA COMPONENT CLASSES
+   ================================================== */
+
+/* Header with gradient */
+.explora-header {
+  background: var(--explora-gradient-primary);
+  color: var(--explora-white);
+  padding: var(--explora-space-16) var(--explora-spacing-page-padding);
+  text-align: center;
+}
+
+.explora-header h1 {
+  font-family: var(--explora-font-family-display);
+  font-size: var(--explora-font-size-5xl);
+  font-weight: var(--explora-font-weight-bold);
+  margin: 0 0 var(--explora-space-4) 0;
+}
+
+/* Search container and input */
+.explora-search-container {
+  margin: var(--explora-space-8) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.explora-search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: var(--explora-space-4) var(--explora-space-6);
+  font-size: var(--explora-font-size-lg);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--explora-white);
+  backdrop-filter: blur(10px);
+  transition: var(--explora-transition-base);
+}
+
+.explora-search-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.explora-search-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* Mood tags for categories */
+.explora-mood-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--explora-space-3);
+  margin: var(--explora-space-6) 0;
+}
+
+.explora-mood-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--explora-space-2);
+  padding: var(--explora-space-2) var(--explora-space-4);
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--explora-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-size: var(--explora-font-size-sm);
+  font-weight: var(--explora-font-weight-medium);
+  cursor: pointer;
+  transition: var(--explora-transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.explora-mood-tag:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.explora-mood-tag.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: var(--explora-white);
+  font-weight: var(--explora-font-weight-semibold);
+}
+
+/* Content grid layout */
+.explora-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--explora-space-8);
+  max-width: var(--explora-container-xl);
+  margin: 0 auto;
+  padding: var(--explora-space-10) var(--explora-spacing-page-padding);
+  min-height: 70vh;
+}
+
+@media (max-width: 1024px) {
+  .explora-content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--explora-space-6);
+  }
+}
+
+/* Place card styling */
+.explora-place-card {
+  background: var(--explora-background-primary);
+  border-radius: var(--explora-radius-2xl);
+  box-shadow: var(--explora-shadow-md);
+  transition: var(--explora-transition-base);
+  border: 1px solid var(--explora-gray-border);
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.explora-place-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--explora-shadow-xl);
+  border-color: var(--explora-primary-teal);
+}
+
+.explora-place-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.explora-place-card-content {
+  padding: var(--explora-space-6);
+}
+
+.explora-place-card h3 {
+  font-family: var(--explora-font-family-display);
+  font-size: var(--explora-font-size-xl);
+  font-weight: var(--explora-font-weight-semibold);
+  color: var(--explora-text-primary);
+  margin: 0 0 var(--explora-space-2) 0;
+}
+
+.explora-place-card-category {
+  display: inline-block;
+  background: var(--explora-primary-teal);
+  color: var(--explora-white);
+  padding: var(--explora-space-1) var(--explora-space-3);
+  border-radius: var(--explora-radius-full);
+  font-size: var(--explora-font-size-xs);
+  font-weight: var(--explora-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--explora-letter-spacing-wide);
+  margin-bottom: var(--explora-space-3);
+}
+
+/* ==================================================
+   COMPONENT BASE STYLES
+   ================================================== */
+
+/* Base Button Styles */
+.btn-base {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--button-radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  min-height: var(--button-height-base);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.btn-primary {
+  background-color: var(--color-button-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-button-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-button-secondary);
+  color: var(--color-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+/* Base Card Styles */
+.card-base {
+  background-color: var(--color-background-primary);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--card-padding);
+  border: 1px solid var(--color-gray-border);
+}
+
+/* Base Input Styles */
+.input-base {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  padding: var(--input-padding);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-radius);
+  min-height: var(--input-height);
+  width: 100%;
+  transition: var(--transition-fast);
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: var(--input-border-color-focus);
+  box-shadow: 0 0 0 3px rgba(23, 162, 184, 0.1);
+}
+
+/* ==================================================
+   RESPONSIVE TYPOGRAPHY
+   ================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-3xl: 2.25rem;  /* 36px */
+    --font-size-4xl: 3rem;     /* 48px */
+    --font-size-5xl: 4rem;     /* 64px */
+  }
+}
+
+/* ==================================================
+   ANIMATIONS
+   ================================================== */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Animation utility classes */
+.animate-spin { animation: spin 1s linear infinite; }
+.animate-fade-in { animation: fadeIn 0.3s ease-out; }
+.animate-slide-in { animation: slideIn 0.3s ease-out; }
+
+/* ==================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary: #1a1a1a;
+    --color-background-secondary: #2d2d2d;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #b0b0b0;
+    --color-gray-border: #404040;
+  }
+}

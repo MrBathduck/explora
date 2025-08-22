@@ -10,27 +10,27 @@
 
 #### **1. Current Task Completion Verification**
 - Confirm previous task is actually complete
-- Check for any loose ends or quality issues
+- Check current phase work progress and quality
 - Ensure proper documentation and progress tracking
-- Verify readiness for next challenge
+- Verify readiness for next challenge in current phase
 
-#### **2. Next Task Identification**
-- Analyze TODO.md and roadmap for logical progression
-- Consider user's current skill level and energy
-- Choose task that builds on recent learning
-- Ensure appropriate difficulty progression
+#### **2. Next Task Identification Based on Current Phase**
+- Analyze TODO.md current phase sections for logical progression
+- Prioritize based on current phase objectives and success criteria
+- Consider current progress toward phase completion targets
+- Choose task that advances current phase goals effectively
 
-#### **3. Task Breakdown and Explanation**
-- Break complex task into simple, manageable steps
-- Explain why this task is important for the project
-- Estimate time and effort required
-- Identify what new skills or concepts will be learned
+#### **3. Task Breakdown and Context**
+- Break complex task into manageable steps
+- Explain how this task advances toward current phase completion
+- Estimate time and effort required for solo developer
+- Identify relevant skills or concepts to learn
 
-#### **4. Prerequisites and Preparation Check**
-- Verify all necessary tools and accounts are ready
-- Check for any dependencies or setup requirements
-- Ensure understanding of concepts needed
-- Confirm energy level and time availability
+#### **4. Prerequisites and Readiness Check**
+- Verify infrastructure ready for current phase work
+- Check required tools and resources are available
+- Ensure technical components are operational
+- Confirm energy level for current phase complexity
 
 ---
 
@@ -39,24 +39,27 @@
 ```
 🚀 Next Task: [Task Name]
 
+🎯 Phase Context: [How this advances current phase objectives]
+
 ✅ Prerequisites Check:
-- [Requirement 1] ✅/❌
-- [Requirement 2] ✅/❌  
-- [Requirement 3] ✅/❌
+- [Required tools/resources ready] ✅/❌
+- [Technical infrastructure ready] ✅/❌  
+- [Dependencies completed] ✅/❌
+- [Skill level appropriate] ✅/❌
 
 📋 What This Task Involves:
-1. [Step 1 - simple and specific]
-2. [Step 2 - builds on step 1]
-3. [Step 3 - completion criteria]
+1. [Step 1 - specific and achievable]
+2. [Step 2 - builds toward phase goals]
+3. [Step 3 - completion criteria for phase progress]
 
-⏱️ Estimated Time: [X] hours ([Y] for learning, [Z] for implementation)
-🎯 Success Criteria: [How you'll know it's complete]
-📚 New Skills: [What you'll learn doing this]
+🎯 Success Criteria: [How you'll know it advances phase objectives]
 
-🔥 Why This Matters: [How this task helps users/project]
+🔥 Why This Matters: [How this helps users and phase completion]
 
-Ready to start? Say 'yes' and I'll walk you through step 1!
-Type /Stuck if you want to try something simpler first.
+📊 Phase Impact: [Progress toward current phase targets]
+
+Ready to advance toward phase completion? Say 'yes' and I'll guide you through step 1!
+Type /Stuck if you want to try a simpler task first.
 ```
 
 ---
@@ -64,190 +67,166 @@ Type /Stuck if you want to try something simpler first.
 ## 🗺️ Task Selection Logic
 
 ### **Priority Framework:**
-1. **Blocking Dependencies** - Tasks that unlock other work
-2. **User Value** - Features that directly help travelers
-3. **Learning Progression** - Skills that build on previous knowledge
-4. **Momentum Builders** - Tasks that feel rewarding to complete
+1. **Phase Completion Dependencies** - Tasks that unlock phase advancement
+2. **User Value** - Features that directly help target users  
+3. **Technical Foundation** - Infrastructure needed for current phase
+4. **Learning Progression** - Skills that build on recent work
 
-### **Skill Level Considerations:**
+### **Phase-Appropriate Progression:**
 
-#### **Beginner (0-2 weeks):**
-- Focus on setup and basic functionality
-- One new concept per task maximum
-- Lots of copy-paste with explanation
-- Immediate visual results when possible
+#### **Early Phase (Foundation):**
+- Environment setup and basic functionality
+- Core data structures and simple features
+- Basic UI components and user flows
+- Foundation for more complex work
 
-#### **Learning (2-8 weeks):**
-- Combine 2-3 familiar concepts
-- Introduce problem-solving elements
-- More original thinking required
-- Focus on understanding "why" not just "how"
+#### **Development Phase (Building):**
+- Advanced features and integrations
+- Complex UI/UX implementations
+- Database optimization and scaling
+- Quality frameworks and validation
 
-#### **Developing (2+ months):**
-- Complex features with multiple components
-- Research and decision-making involved
-- Creative problem-solving encouraged
-- Planning and architecture considerations
-
----
-
-## 📊 Task Categorization
-
-### **Setup Tasks (Foundation):**
-- Environment configuration
-- Account creation and API setup
-- Tool installation and verification
-- Basic project structure
-
-**Next Task Examples:**
-- "Set up Google Maps API key and test basic integration"
-- "Configure Firebase project with security rules"
-- "Install and configure development tools"
-
-### **Feature Development (Building):**
-- User interface components
-- Data handling and storage
-- Third-party service integration
-- User experience improvements
-
-**Next Task Examples:**
-- "Create a location card component that displays place info"
-- "Add search functionality to filter locations by name"
-- "Implement user authentication with Google login"
-
-### **Polish and Enhancement (Refining):**
-- Performance optimization
-- Mobile responsiveness
-- Error handling and edge cases
-- User experience refinements
-
-**Next Task Examples:**
-- "Add loading states and error messages for better UX"
-- "Optimize app performance for mobile devices"
-- "Implement offline functionality for saved itineraries"
+#### **Advanced Phase (Optimization):**
+- AI/ML features and personalization
+- Cultural adaptation and globalization
+- Performance optimization and scaling
+- Advanced user experience features
 
 ---
 
-## 🎯 Difficulty Progression Guidelines
+## 📊 Task Categories by Type
 
-### **Easy Tasks (Green Light 🟢):**
-- Build directly on just-completed work
-- Use familiar tools and concepts
-- Clear step-by-step instructions available
-- Quick wins with visible results
+### **Foundation Tasks:**
+- Environment configuration and basic setup
+- Core data structures and database design
+- Basic UI components and user interface
+- Essential feature implementations
 
-### **Medium Tasks (Yellow Light 🟡):**
-- Combine multiple learned concepts
-- Require some research or problem-solving
-- May need Claude assistance to complete
-- Good balance of challenge and achievability
+**Next Task Examples:**
+- "Implement core location data structure with validation"
+- "Create basic location browsing interface"
+- "Set up database architecture for current phase"
 
-### **Challenging Tasks (Red Light 🔴):**
-- Significant new learning required
-- Complex integration or logic
-- May take multiple sessions to complete
-- Should only suggest if user is confident and energized
+### **Enhancement Tasks:**
+- Advanced features and complex integrations
+- UI/UX improvements and optimization
+- Data quality and validation systems
+- Performance and scalability improvements
+
+**Next Task Examples:**
+- "Add advanced filtering and search functionality"
+- "Implement drag-and-drop interface for user interactions"
+- "Build recommendation engine with quality scoring"
+
+### **Optimization Tasks:**
+- AI/ML integration and personalization
+- Cultural adaptation and localization
+- Advanced performance optimization
+- Global scaling and infrastructure
+
+**Next Task Examples:**
+- "Implement AI-powered content suggestions"
+- "Add cultural adaptation for international users"
+- "Optimize performance for large-scale deployment"
 
 ---
 
-## 🛡️ Safety Checks Before Proceeding
+## 🎯 Difficulty Progression
+
+### **Foundation Tasks (Building Blocks) 🟢:**
+- Single-component implementations
+- Basic feature applications using established patterns
+- Quality validation for core functionality
+- Simple integrations and connections
+
+### **Enhancement Tasks (Integration) 🟡:**
+- Multi-component feature implementations
+- UX optimization for complex interactions
+- Integration between multiple systems
+- Phase-specific advanced features
+
+### **Optimization Tasks (Advanced) 🔴:**
+- Complex algorithms and AI implementations
+- Cultural adaptation and international features
+- Cross-system integration and optimization
+- Foundation preparation for next phase
+
+---
+
+## 🛡️ Safety Checks
 
 ### **Technical Readiness:**
-- ✅ All necessary accounts and APIs are set up
-- ✅ Development environment is working properly
-- ✅ Previous task dependencies are complete
-- ✅ No major blockers or errors present
+- ✅ Required infrastructure properly implemented
+- ✅ Database architecture supports planned work
+- ✅ Quality frameworks operational
+- ✅ No critical issues blocking progress
 
-### **Learning Readiness:**
-- ✅ User understands concepts from previous tasks
-- ✅ Not too many new concepts introduced at once
-- ✅ Clear learning resources available
-- ✅ Support available for difficult parts
+### **Phase Readiness:**
+- ✅ Current phase prerequisites met
+- ✅ Required resources available for phase work
+- ✅ Technical complexity appropriate for current phase
+- ✅ Understanding of phase objectives clear
 
-### **Energy and Time:**
-- ✅ User has adequate time for the task
-- ✅ Energy level appropriate for task difficulty
-- ✅ Not rushing due to external pressures
-- ✅ Motivated and excited about the challenge
+### **Development Progression:**
+- ✅ Current work aligns with phase success criteria
+- ✅ Task advances toward phase completion
+- ✅ Work prepares foundation for future phases
+- ✅ Complexity appropriate for solo developer constraints
 
 ---
 
-## 🔄 Alternative Paths
+## 📄 Alternative Paths
 
-### **If User Wants Something Easier:**
+### **If User Wants Simpler Task:**
 ```
-🌱 No problem! Let's try something simpler first.
+🌱 Let's start with foundational work:
 
 Easier alternatives:
-1. [Simpler version of suggested task]
-2. [Different task that's less complex]
-3. [Practice exercise to build confidence]
+1. [Simpler version focusing on single component]
+2. [Basic implementation before advanced features]
+3. [Practice task to build confidence]
 
-Which sounds more manageable right now?
+Which feels more manageable for current progress?
 ```
 
-### **If User Wants More Challenge:**
+### **If User Wants Advanced Challenge:**
 ```
-🚀 Feeling ambitious? Great! Here are some stretch options:
+🚀 Ready for complex challenges:
 
-Advanced challenges:
-1. [More complex version of task]
-2. [Additional feature to add]
-3. [Creative enhancement idea]
-
-Warning: These will require extra research and patience!
+Advanced options:
+1. [Multi-system integration task]
+2. [AI/ML powered feature implementation]
+3. [Cultural adaptation or optimization work]
 ```
 
 ### **If Prerequisites Not Met:**
 ```
-⚙️ Let's get you ready first!
+⚙️ Let's ensure readiness first:
 
-Missing prerequisites:
-- [Specific requirement and how to meet it]
-- [Another requirement and solution]
+Missing for current phase:
+- [Specific infrastructure requirement]
+- [Required tool or resource needed]
+- [Technical component that needs completion]
 
-Once these are sorted (should take about [X] minutes), 
-you'll be ready for the next exciting challenge!
+Once ready (about [X] time), you'll be set for advancement!
 ```
-
----
-
-## 🎉 Motivation and Context
-
-### **Connect to Project Vision:**
-- Explain how this task helps future travelers
-- Show how it fits into the bigger picture
-- Highlight unique value being created
-- Build excitement about user impact
-
-### **Acknowledge Growth:**
-- Compare current task complexity to earlier work
-- Highlight new skills being developed
-- Recognize increasing developer confidence
-- Celebrate problem-solving improvements
-
-### **Build Anticipation:**
-- Hint at cool results they'll see
-- Mention satisfaction of completing challenge
-- Preview what becomes possible after this task
-- Create excitement about learning journey
 
 ---
 
 ## 🎯 Success Criteria
 
 After `/NextTask`, user should:
-- ✅ Feel excited and confident about next step
-- ✅ Understand exactly what they're building and why
-- ✅ Know the first specific action to take
-- ✅ Feel appropriately challenged but not overwhelmed
-- ✅ See clear connection to project goals
+- ✅ Know specific action to take next
+- ✅ Understand how task advances current phase
+- ✅ Feel appropriately challenged for current phase complexity
+- ✅ See clear connection to phase completion goals
 
 ---
 
 ## 🔗 Related Commands
 
-- Use `/Status` if user wants to double-check current progress
-- Suggest `/Help [concept]` if new concepts need explanation
-- Recommend `/Learn [skill]` if significant new learning required
-- Offer `/Stuck` pathway if user feels overwhelmed
+- Use `/Status` for comprehensive current phase progress review
+- Suggest `/Help [topic]` for phase-appropriate concept guidance
+- Recommend `/Learn [skill]` for complex technical skills
+- Offer `/FeatureRequest` for new phase enhancement ideas
+- Use `/ReportIssue` pathway if blockers discovered

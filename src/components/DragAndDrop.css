@@ -1,0 +1,78 @@
+/* Drag and Drop Styling */
+
+.draggable-location-card {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.draggable-location-card:active {
+  cursor: grabbing;
+}
+
+.droppable-day-container {
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.drop-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(74, 144, 226, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  animation: dropPulse 1s infinite;
+}
+
+@keyframes dropPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.day-locations-droppable {
+  min-height: 120px;
+  position: relative;
+}
+
+/* Enhanced visual feedback for valid drop targets */
+.droppable-day-container.drag-over-valid {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);
+  border: 2px dashed #4a90e2;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.2);
+}
+
+/* Style for empty day containers to show they're droppable */
+.empty-day .droppable-day-container {
+  border: 2px dashed #e0e0e0;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.empty-day .droppable-day-container:hover {
+  border-color: #4a90e2;
+  background: rgba(74, 144, 226, 0.05);
+}
+
+.drag-drop-hint {
+  margin: var(--explora-space-3) 0 !important;
+  font-size: var(--explora-font-size-sm) !important;
+  color: var(--explora-text-muted) !important;
+  font-style: italic;
+  font-family: var(--explora-font-family-primary);
+}
